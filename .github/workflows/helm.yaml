@@ -6,9 +6,9 @@ on:
       - main
     paths:
       - 'myapp/**'
-      - 'Chart.yaml'
-      - 'values.yaml'
       - '.github/workflows/**'
+      - 'values.yaml'
+      - 'Chart.yaml'
 
 permissions:
   contents: write
@@ -28,7 +28,7 @@ jobs:
 
       - name: Package chart
         run: |
-          helm package . -d .
+          helm package myapp -d .
           helm repo index . --url https://iamkeerthik.github.io/helm_crash_course/
 
       - name: Publish to GitHub Pages
