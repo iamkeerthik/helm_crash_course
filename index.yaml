@@ -9,6 +9,6 @@ entries:
     name: myapp
     type: application
     urls:
-    - https://iamkeerthik.github.io/helm_crash_course/myapp-0.1.0.tgz
+    - https://iamkeerthik.github.io/helm_crash_course/myapp-0.1.1.tgz
     version: 0.1.0
 generated: "2025-11-02T15:11:05.008098+05:30"
