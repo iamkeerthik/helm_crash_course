@@ -29,6 +29,7 @@ podAnnotations: {}
 podLabels: 
    owner: keerthik
    automation: github
+   test: hello
 
 podSecurityContext: {}
   # fsGroup: 2000
