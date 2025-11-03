@@ -26,7 +26,9 @@ serviceAccount:
   name: ""
 
 podAnnotations: {}
-podLabels: {}
+podLabels: 
+   owner: keerthik
+   automation: github
 
 podSecurityContext: {}
   # fsGroup: 2000
