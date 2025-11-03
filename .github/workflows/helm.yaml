@@ -7,8 +7,8 @@ on:
     paths:
       - 'myapp/**'
       - '.github/workflows/**'
-      - 'values.yaml'
-      - 'Chart.yaml'
+      - 'charts/myapp/values.yaml'
+      - 'charts/myapp/Chart.yaml'
 
 permissions:
   contents: write
