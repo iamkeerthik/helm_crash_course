@@ -1,4 +1,4 @@
-name: Publish Helm Charts
+name: Release Charts
 
 on:
   push:
@@ -18,22 +18,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Helm
-        uses: azure/setup-helm@v4
         with:
-          version: v3.14.0
+          fetch-depth: 0
 
-      - name: Package chart
+      - name: Configure Git
         run: |
-          helm package myapp -d .
-          helm repo index . --url https://iamkeerthik.github.io/helm_crash_course/
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
