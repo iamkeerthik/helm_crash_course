@@ -26,10 +26,7 @@ serviceAccount:
   name: ""
 
 podAnnotations: {}
-podLabels: 
-  app: helm
-  owner: keerthik
-  update: github_action
+podLabels: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
