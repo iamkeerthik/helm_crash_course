@@ -11,4 +11,14 @@ entries:
     urls:
     - https://iamkeerthik.github.io/helm_crash_course/myapp-0.1.1.tgz
     version: 0.1.1
-generated: "2025-11-02T15:11:05.008098+05:30"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-11-03T03:41:02.922022887Z"
+    description: A Helm chart for Kubernetes
+    digest: 9169ee537e3ddc04fbf8651f2d6518e5ee02026d125809d53e5d487c36b8bb12
+    name: myapp
+    type: application
+    urls:
+    - https://github.com/iamkeerthik/helm_crash_course/releases/download/myapp-0.1.0/myapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-11-03T03:41:02.922030812Z"
