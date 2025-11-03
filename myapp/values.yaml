@@ -29,6 +29,7 @@ podAnnotations: {}
 podLabels: 
   app: helm
   owner: keerthik
+  update: github_action
 
 podSecurityContext: {}
   # fsGroup: 2000
